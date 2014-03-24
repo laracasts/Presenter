@@ -11,11 +11,13 @@ Instead, leverage view presenters. That's what they're for! This package provide
 
 Pull this package in through Composer.
 
+```js
 {
     "require": {
         "laracasts/presenter": "0.1.*"
     }
 }
+``
 
 ## Usage
 
@@ -69,5 +71,4 @@ Notice how the call to the `present()` method (which will return your new or cac
 
 Have fun!
 
-- Jeffrey
-[https://laracasts.com](https://laracasts.com)
+Jeffrey @ [https://laracasts.com](https://laracasts.com)
