@@ -2,9 +2,10 @@
 
 interface PresentableInterface {
 
-    /**
-     * @return mixed
-     */
-    public function present();
+	/**
+	 * Prepare a new or cached presenter instance
+	 * @return mixed
+	 */
+	public function present();
 
 } 
