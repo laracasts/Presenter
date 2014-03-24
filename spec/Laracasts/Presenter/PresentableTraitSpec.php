@@ -40,10 +40,12 @@ class PresentableTraitSpec extends ObjectBehavior
 		$two = $this->present();
 
 		$one->shouldBe($two);
-
 	}
 }
 
+// We'll reproduce what the consumer of our
+// package might do. This way, we can test the
+// trait.
 class Foo {
 	use \Laracasts\Presenter\PresentableTrait;
 
