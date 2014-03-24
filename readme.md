@@ -17,7 +17,7 @@ Pull this package in through Composer.
         "laracasts/presenter": "0.1.*"
     }
 }
-``
+```
 
 ## Usage
 
