@@ -6,6 +6,7 @@
         "view",
         "laravel"
     ],
+    "license": "MIT",
     "authors": [
         {
             "name": "Jeffrey Way",
