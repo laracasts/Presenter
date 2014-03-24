@@ -14,11 +14,11 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.1.*",
-        "mockery/mockery": "0.9.*"
+        "illuminate/support": "4.1.*"
     },
     "require-dev": {
-        "phpspec/phpspec": "2.0.*@dev"
+        "phpspec/phpspec": "2.0.*@dev",
+        "mockery/mockery": "0.9.*"
     },
     "autoload": {
         "psr-0": {
