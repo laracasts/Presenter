@@ -15,16 +15,15 @@
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/support": "4.1.*"
+        "illuminate/support": "~4.1"
     },
     "require-dev": {
-        "phpspec/phpspec": "2.0.*@dev",
-        "mockery/mockery": "0.9.*"
+        "phpspec/phpspec": "~2.0",
+        "mockery/mockery": "~0.9"
     },
     "autoload": {
         "psr-0": {
             "Laracasts\\Presenter": "src/"
         }
-    },
-    "minimum-stability": "stable"
+    }
 }
