@@ -39,7 +39,7 @@ trait PresentableTrait {
 	 */
 	 public function getPresentAttribute()
 	 {
-	 	return present();
+	 	return $this->present();
 	 }
 
 } 
