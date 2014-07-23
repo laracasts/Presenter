@@ -28,6 +28,11 @@ abstract class Presenter {
 			return $this->{$property}();
 		}
 
+		if (method_exists($this->entity, $property))
+		{
+			return $this->entity->{$property}();
+		}
+
 		return $this->entity->{$property};
 	}
 
