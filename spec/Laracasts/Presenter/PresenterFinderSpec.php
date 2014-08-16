@@ -20,7 +20,7 @@ class PresenterFinderSpec extends ObjectBehavior
 
 	function it_returns_null_when_no_presenter_exists()
 	{
-		$this->getPresenterFor(new \My\Spec\AnotherTest())->shouldBe(null);
+		$this->getPresenterFor(new \My\Spec\AnotherTest())->shouldBe(false);
 	}
 }
 

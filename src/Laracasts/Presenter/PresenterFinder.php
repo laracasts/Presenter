@@ -2,17 +2,24 @@
 
 namespace Laracasts\Presenter;
 
-class PresenterFinder
+use Laracasts\Presenter\Contracts\PresenterFinderInterface;
+
+class PresenterFinder implements PresenterFinderInterface
 {
 
-    public function getPresenterFor($object)
-    {
-        $className = get_class($object);
-	
-	if (class_exists ($presenter = $className . 'Presenter')) {
-		return $presenter;
-	}
+	/**
+	 * @param $object object we want to find the presenter for
+	 *
+	 * @return string|null return the class name of the found presenter, or null
+	 */
+	public function getPresenterFor($object)
+	{
+		$className = get_class($object);
 
-	return null;
-    }
+		if (class_exists ($presenter = $className . 'Presenter')) {
+			return $presenter;
+		}
+
+		return false;
+	}
 }
