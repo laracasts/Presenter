@@ -26,12 +26,12 @@ class PresentableTraitSpec extends ObjectBehavior
 		$this->present()->shouldBeAnInstanceOf('FooPresenter');
 	}
 
-    function it_throws_up_if_invalid_presenter_is_provided()
-    {
-        $this->presenter = 'Invalid';
+	function it_throws_up_if_invalid_presenter_is_provided()
+	{
+		$this->presenter = 'Invalid';
 
-        $this->shouldThrow('Laracasts\Presenter\Exceptions\PresenterException')->duringPresent();
-    }
+		$this->shouldThrow('Laracasts\Presenter\Exceptions\PresenterException')->duringPresent();
+	}
 
 	function it_caches_the_presenter_for_future_use()
 	{
@@ -43,16 +43,16 @@ class PresentableTraitSpec extends ObjectBehavior
 		$one->shouldBe($two);
 	}
 
-    function it_fetches_a_valid_presenter_by_a_finder()
-    {
-        $this->setPresenterFinder(new PresenterFinder);
+	function it_fetches_a_valid_presenter_by_a_finder()
+	{
+		$this->setPresenterFinder(new PresenterFinder);
 
-        Mockery::mock('spec\Laracasts\Presenter\FooPresenter');
+		Mockery::mock('spec\Laracasts\Presenter\FooPresenter');
 
-        $this->presenter = '';
+		$this->presenter = '';
 
-        $this->present()->shouldBeAnInstanceOf('spec\Laracasts\Presenter\FooPresenter');
-    }
+		$this->present()->shouldBeAnInstanceOf('spec\Laracasts\Presenter\FooPresenter');
+	}
 }
 
 // We'll reproduce what the consumer of our

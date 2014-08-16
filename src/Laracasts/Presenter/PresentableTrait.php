@@ -19,7 +19,7 @@ trait PresentableTrait {
 	 *
 	 * @var PresenterFinderInterface
 	 */
-    protected $presenterFinder;
+	protected $presenterFinder;
 
 
 	/**
@@ -30,7 +30,7 @@ trait PresentableTrait {
 	 */
 	public function present()
 	{
-        $presenter = $this->getPresenterClass();
+		$presenter = $this->getPresenterClass();
 		if (false === $presenter)
 		{
 			throw new PresenterException('Please set the $presenter property to your presenter path.');
@@ -51,12 +51,12 @@ trait PresentableTrait {
 	 */
 	protected function getPresenterClass()
 	{
-        if ($this->presenterExists($this->presenter)) {
+		if ($this->presenterExists($this->presenter)) {
 			return $this->presenter;
 		}
 
 		if ($this->presenterFinder) {
-            return $this->presenterFinder->getPresenterFor($this);
+			return $this->presenterFinder->getPresenterFor($this);
 		}
 
 		return false;
@@ -81,7 +81,7 @@ trait PresentableTrait {
 	 */
 	public function setPresenterFinder(PresenterFinderInterface $presenterFinder = null)
 	{
-        $this->presenterFinder = $presenterFinder;
+		$this->presenterFinder = $presenterFinder;
 
 		return $this;
 	}
