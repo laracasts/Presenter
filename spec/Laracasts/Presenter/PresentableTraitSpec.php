@@ -2,6 +2,7 @@
 
 namespace spec\Laracasts\Presenter;
 
+use Laracasts\Presenter\PresenterFinder;
 use Mockery;
 use PhpSpec\ObjectBehavior;
 use Prophecy\Argument;
@@ -40,6 +41,17 @@ class PresentableTraitSpec extends ObjectBehavior
 		$two = $this->present();
 
 		$one->shouldBe($two);
+	}
+
+	function it_fetches_a_valid_presenter_by_a_finder()
+	{
+		$this->setPresenterFinder(new PresenterFinder);
+
+		Mockery::mock('spec\Laracasts\Presenter\FooPresenter');
+
+		$this->presenter = '';
+
+		$this->present()->shouldBeAnInstanceOf('spec\Laracasts\Presenter\FooPresenter');
 	}
 }
 
