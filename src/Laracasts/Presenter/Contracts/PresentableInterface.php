@@ -9,4 +9,12 @@ interface PresentableInterface {
 	 */
 	public function present();
 
+	/**
+	 * Wrap presenter in attribute
+	 *
+	 * @return mixed
+	 */
+	public function getPresentAttribute();
+	
+
 } 
