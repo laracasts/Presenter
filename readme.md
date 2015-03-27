@@ -11,7 +11,19 @@ Instead, leverage view presenters. That's what they're for! This package provide
 
 Pull this package in through Composer.
 
-```js
+##### Laravel 5
+
+```json
+{
+    "require": {
+        "laracasts/presenter": "0.2.*"
+    }
+}
+```
+
+##### Laravel 4
+
+```json
 {
     "require": {
         "laracasts/presenter": "0.1.*"
