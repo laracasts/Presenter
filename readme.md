@@ -13,7 +13,7 @@ Pull this package in through Composer.
 
 ##### Laravel 5
 
-```js
+```json
 {
     "require": {
         "laracasts/presenter": "0.2.*"
@@ -23,7 +23,7 @@ Pull this package in through Composer.
 
 ##### Laravel 4
 
-```js
+```json
 {
     "require": {
         "laracasts/presenter": "0.1.*"
