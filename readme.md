@@ -32,12 +32,12 @@ class UserPresenter extends Presenter {
 
     public function fullName()
     {
-        return $this->first . ' ' . $this->last;
+        return $this->entity->first . ' ' . $this->entity->last;
     }
 
     public function accountAge()
     {
-        return $this->created_at->diffForHumans();
+        return $this->entity->created_at->diffForHumans();
     }
 
 }
