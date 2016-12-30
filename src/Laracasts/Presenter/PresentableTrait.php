@@ -31,5 +31,15 @@ trait PresentableTrait {
 
 		return $this->presenterInstance;
 	}
+	
+	/**
+	 * Wrap presenter in a Attribute
+	 *
+	 * @return mixed
+	 */
+	 public function getPresentAttribute()
+	 {
+	 	return $this->present();
+	 }
 
 } 
