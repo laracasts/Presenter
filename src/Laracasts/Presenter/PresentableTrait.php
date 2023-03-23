@@ -19,9 +19,14 @@ trait PresentableTrait {
 	 */
 	public function present()
 	{
-		if ( ! $this->presenter or ! class_exists($this->presenter))
+        	if ( ! $this->presenter ) 
+        	{
+            		$this->presenter = get_class($this).'Presenter';
+		}
+
+		if ( ! class_exists($this->presenter) )
 		{
-			throw new PresenterException('Please set the $presenter property to your presenter path.');
+			throw new PresenterException('Presenter Not Found : '.$this->presenter);
 		}
 
 		if ( ! $this->presenterInstance)
