@@ -31,4 +31,21 @@ abstract class Presenter {
 		return $this->entity->{$property};
 	}
 
-} 
+	/**
+	 * Allow for method-style retrieval
+	 *
+	 * @param $method
+	 * @param $arguments
+	 * @return mixed
+	 */
+	public function __call($method, $arguments)
+	{
+		if (method_exists($this->entity, $method))
+		{
+			return call_user_func_array([$this->entity, $method], $arguments);
+		}
+
+		throw new \Exception("Method not found on presenter or its entity.");
+	}
+
+}
