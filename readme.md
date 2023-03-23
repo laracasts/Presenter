@@ -11,13 +11,7 @@ Instead, leverage view presenters. That's what they're for! This package provide
 
 Pull this package in through Composer.
 
-```js
-{
-    "require": {
-        "laracasts/presenter": "0.1.*"
-    }
-}
-```
+Run `composer require laracasts/presenter`
 
 ## Usage
 
