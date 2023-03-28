@@ -24,10 +24,12 @@ Pull this package in through Composer.
 The first step is to store your presenters somewhere - anywhere. These will be simple objects that do nothing more than format data, as required.
 
 Here's an example of a presenter.
+The `@mixin`, when it points to your model, provides autocompletion on `$this` in your IDE.
 
 ```php
 use Laracasts\Presenter\Presenter;
 
+/** @mixin \User */
 class UserPresenter extends Presenter {
 
     public function fullName()
