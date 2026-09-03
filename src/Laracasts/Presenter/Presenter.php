@@ -31,4 +31,16 @@ abstract class Presenter {
 		return $this->entity->{$property};
 	}
 
+
+	/**
+	 * Provide compatibility for the 'or' syntax in Blade templates
+	 *
+	 * @param $property
+	 * @return boolean
+	 */
+	public function __isset($property)
+	{
+		return method_exists($this, $property);
+	}
+
 } 
